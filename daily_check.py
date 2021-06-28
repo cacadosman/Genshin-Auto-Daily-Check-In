@@ -21,7 +21,7 @@ def set_cookies(driver, raw_cookies):
 url = "https://webstatic-sea.mihoyo.com/ys/event/signin-sea/index.html?act_id=e202102251931481&lang=en-us"
 driver.get(url)
 
-cookies = open('cookie.txt', 'r').read().strip()
+cookies = open('/cookie.txt', 'r').read().strip()
 set_cookies(driver, cookies)
 
 driver.get(url)
@@ -36,6 +36,6 @@ time.sleep(5)
 
 driver.close()
 
-report = open('report.txt', 'a+')
-report.write("Script executed at {}".format(datetime.now().strftime("%d/%m/%Y %H:%M:%S")))
+report = open('/report.txt', 'a+')
+report.write("Script executed at {}\n".format(datetime.now().strftime("%d/%m/%Y %H:%M:%S")))
 report.close()
