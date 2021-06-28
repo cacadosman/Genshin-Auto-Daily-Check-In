@@ -8,7 +8,7 @@ chrome_options = Options()
 chrome_options.add_argument("--headless")
 chrome_options.add_argument("--no-sandbox")
 chrome_options.add_argument("--disable-dev-shm-usage")
-driver = webdriver.Chrome(chrome_options=chrome_options)
+driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver', chrome_options=chrome_options)
 
 def set_cookies(driver, raw_cookies):
     for raw_cookie in raw_cookies.split("; "):
@@ -33,12 +33,6 @@ daily_count = int(driver.find_element_by_xpath(daily_count_xpath).text)
 reward_xpath = "//body/div[1]/div[2]/div[1]/div[4]/div[{}]".format(daily_count + 1)
 driver.find_element_by_xpath(reward_xpath).click()
 time.sleep(5)
-
-new_daily_count = int(driver.find_element_by_xpath(daily_count_xpath).text)
-if (new_daily_count > daily_count):
-    print("Success")
-else:
-    print("Already claimed")
 
 driver.close()
 
