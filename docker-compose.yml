@@ -1,0 +1,5 @@
+version: '3'
+services:
+  genshin-daily-check-in:
+    build: .
+    restart: on-failure
