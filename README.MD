@@ -8,7 +8,8 @@ But don't worry, this code might be the solution :)
 
 
 ### What this code does:
-This code will automate to do daily check-in in Hoyolab to claim rewards using **cron** and **selenium**
+~~This code will automate to do daily check-in in Hoyolab to claim rewards using **cron** and **selenium**~~ (old version) <br>
+This code will automate to do daily check-in in Hoyolab to claim rewards using **python requests**
 
 
 ## Install
