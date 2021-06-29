@@ -15,6 +15,7 @@ RUN pip install --upgrade pip
 RUN pip install selenium
 
 ADD daily_check.py /daily_check.py
+ADD daily_check_api.py /daily_check_api.py
 ADD cookie.txt /cookie.txt
 ADD entrypoint.sh /entrypoint.sh
 
